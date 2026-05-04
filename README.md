@@ -13,8 +13,7 @@ The system integrates large language models with vector search to ensure respons
 * Context-aware medical question answering using RAG
 * Dynamic retrieval mechanism for improved relevance
 * Conversational memory for handling follow-up queries
-* Re-ranking of retrieved documents for improved accuracy
-* Integration with a high-performance LLM via Groq API
+* Integration with Llama-3-8B via Groq API
 * Deployed using GitHub Actions and AWS for scalability
 
 ---
@@ -25,7 +24,7 @@ The system integrates large language models with vector search to ensure respons
 
 * Python, Flask
 * LangChain (RAG orchestration)
-* Groq API (LLM inference)
+* Groq API (LLM inferencing)
 
 ### Data & Retrieval
 
@@ -36,7 +35,6 @@ The system integrates large language models with vector search to ensure respons
 ### Advanced Retrieval
 
 * Dynamic Top-K retrieval
-* Cross-encoder re-ranking (Sentence Transformers)
 
 ### DevOps & Deployment
 
@@ -52,7 +50,6 @@ The system follows a modular RAG pipeline:
 User Query
 → Query Augmentation (chat history)
 → Dynamic Top-K Retrieval (Pinecone)
-→ Re-ranking (Cross Encoder)
 → Context Injection
 → LLM Response Generation
 → Memory Update
@@ -64,9 +61,8 @@ User Query
 1. User submits a query through the web interface
 2. The system augments the query using recent chat history
 3. Relevant documents are retrieved from Pinecone using dynamic K
-4. Retrieved results are re-ranked for better contextual relevance
-5. The LLM generates a response grounded in retrieved context
-6. The interaction is stored for future conversational continuity
+4. The LLM generates a response grounded in retrieved context
+5. The interaction is stored for future conversational continuity
 
 ---
 
@@ -75,8 +71,8 @@ User Query
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-link>
-cd <repo-name>
+git clone https://github.com/banerjee-sarnab/Medical_Chatbot.git
+cd Medical_Chatbot
 ```
 
 ### 2. Create a virtual environment
@@ -119,24 +115,6 @@ The application is deployed using:
 
 ---
 
-## Future Enhancements
-
-* Hybrid search (BM25 + dense retrieval)
-* Multilingual and voice support
-* Drug interaction and safety modules
-* Personalized health profiles
-* Improved UI/UX for accessibility
-
----
-
-## Limitations
-
-* Not a substitute for professional medical advice
-* Responses depend on the quality and coverage of ingested data
-* Requires further validation for clinical-grade deployment
-
----
-
 ## Use Case
 
 This system is designed as a first-level assistant for users to:
@@ -144,11 +122,5 @@ This system is designed as a first-level assistant for users to:
 * Understand symptoms
 * Learn about medical conditions
 * Get general health-related guidance
-
----
-
-## Author
-
-Developed as an end-to-end applied AI project focused on real-world deployment of RAG systems, combining machine learning, backend engineering, and MLOps practices.
 
 ---
