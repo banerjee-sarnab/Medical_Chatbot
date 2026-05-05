@@ -72,15 +72,12 @@ User Query
 
 ```bash
 git clone https://github.com/banerjee-sarnab/Medical_Chatbot.git
-cd Medical_Chatbot
 ```
 
-### 2. Create a virtual environment
+### 2. Go to the Project Directory
 
 ```bash
-python -m venv venv
-source venv/bin/activate    # Mac/Linux
-venv\Scripts\activate       # Windows
+cd Medical_Chatbot
 ```
 
 ### 3. Install dependencies
